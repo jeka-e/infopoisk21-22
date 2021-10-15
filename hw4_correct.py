@@ -28,7 +28,7 @@ tfvectorizer = TfidfVectorizer(use_idf=False)
 countvectorizer = CountVectorizer()
 
 
-fast_text_file = '/content/gdrive/MyDrive/fast_text_file/araneum_none_fasttextcbow_300_5_2018.model'
+fast_text_file = 'araneum_none_fasttextcbow_300_5_2018.model'
 model_fasttext = gensim.models.KeyedVectors.load(fast_text_file)
 
 tokenizer_bert = AutoTokenizer.from_pretrained("cointegrated/rubert-tiny")
@@ -36,8 +36,8 @@ model_bert = AutoModel.from_pretrained("cointegrated/rubert-tiny")
 model_bert.cuda()  
 
 
-def extract_data():#УБРАТЬ ХАРДКОД
-    with open('/content/gdrive/MyDrive/fast_text_file/questions_about_love.jsonl', 'r') as f:
+def extract_data():
+    with open('questions_about_love.jsonl', 'r') as f:
         corpus = list(f)[:10000]  
 
     questions = []
