@@ -13,7 +13,9 @@ df = pd.DataFrame({
   'second column': [10, 20, 30, 40]
 })
 
-option = st.selectbox('How would you like to be contacted?',
+def opt():
+	option = st.selectbox('How would you like to be contacted?',
                       ('Email', 'Home phone', 'Mobile phone'))
 
-st.write(option)
+	st.write(option)
+opt()
