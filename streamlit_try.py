@@ -7,7 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/19GY_nquVyf1PtsHgHSntQOINeRkzggad
 """
 
+! pip install streamlit
+
 import pandas as pd
+import streamlit as st
 
 """
 # My first app
@@ -19,5 +22,6 @@ df = pd.DataFrame({
   'second column': [10, 20, 30, 40]
 })
 
-df
+option = st.selectbox('How would you like to be contacted?',
+                      ('Email', 'Home phone', 'Mobile phone'))
 
