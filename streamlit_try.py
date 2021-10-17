@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 import streamlit as st
 
@@ -14,8 +12,7 @@ df = pd.DataFrame({
 })
 
 def opt():
-	option = st.selectbox('How would you like to be contacted?',
+    option = st.selectbox('How would you like to be contacted?',
                       ('Email', 'Home phone', 'Mobile phone'))
-
-	st.write(option)
+    st.write(option)
 opt()
